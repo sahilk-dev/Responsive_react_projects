@@ -57,7 +57,7 @@ const Navbar = () => {
                         {isOpen ? (
                             // Close (X) icon
                             <svg
-                                className='w-6 h-6'
+                                className={`w-6 h-6 transform transition-transform duration-300 ${isOpen ? "rotate-90" : ""}`}
                                 fill='none'
                                 stroke='currentColor'
                                 strokeWidth='2'
@@ -72,7 +72,7 @@ const Navbar = () => {
                         ) : (
                             // Hamburger icon
                             <svg
-                                className='w-6 h-6'
+                                className={`w-6 h-6 transform transition-transform duration-300 ${isOpen ? "rotate-90" : ""}`}
                                 fill='none'
                                 stroke='currentColor'
                                 strokeWidth='2'
