@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     // Initially false, meaning menu is closed.
@@ -40,9 +41,12 @@ const Navbar = () => {
                     <button className='px-4 py-2 text-indigo-600 border border-indigo-600 rounded-md hover:bg-indigo-50 font-medium cursor-pointer'>
                         Login
                     </button>
-                    <button className='px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 font-medium cursor-pointer'>
-                        Sign Up
-                    </button>
+                    <Link
+                        to="/signup"
+                        className='px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 font-medium cursor-pointer'
+                    >
+                    Sign Up
+                    </Link>
                 </div>
 
                 {/* Hamburger Icon (Mobile Only) */}
@@ -104,9 +108,13 @@ const Navbar = () => {
                     <button className='w-full px-4 py-2 text-indigo-600 border border-indigo-600 rounded-md hover: bg-indigo-50 font-medium'>
                         Login
                     </button>
-                    <button className='w-full px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 font-medium'>
-                        Sign Up
-                    </button>
+                    <Link
+                        onClick={() => setIsOpen(false)}
+                        to="/signup"
+                        className='w-full px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 font-medium text-center'
+                    >
+                    Sign Up
+                    </Link>
                 </div>
             </div>
         )}
